@@ -12,8 +12,6 @@
  * @package         Berlin_Link
  */
 
-// Your code starts here.
-
 require_once __DIR__ . '/vendor/autoload.php'; 
 
 use BerlinDB\Database\Table as Table;
