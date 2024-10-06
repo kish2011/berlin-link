@@ -3,7 +3,7 @@
  * Plugin Name:     Berlin Link
  * Plugin URI:      https://plugins.wp-cli.org/demo-plugin
  * Description:     This is a Berlin Link demo plugin
- * Author:          wp-cli
+ * Author:          kishores
  * Author URI:      https://wp-cli.org
  * Text Domain:     berlin-link
  * Domain Path:     /languages
@@ -12,7 +12,7 @@
  * @package         Berlin_Link
  */
 
-require_once __DIR__ . '/vendor/autoload.php'; 
+require_once __DIR__ . '/vendor/autoload.php';
 
 use BerlinDB\Database\Table as Table;
 
@@ -62,7 +62,7 @@ class Build_Table extends Table {
 
 		// Set the database schema
 		$this->schema = $this->arr_to_schema($schema);
-		
+
 		parent::__construct();
 	}
 
@@ -78,7 +78,7 @@ class Build_Table extends Table {
 				$primary  = (isset($value['primary'])) ?  "PRIMARY KEY" : " ";
 				$unique  = (isset($value['unique'])) ?  "UNIQUE" : " ";
 
-				$arr[$key1] = $value['name'] . " " .  $value['type'] . $length . " " . "NOT NULL" . " " 
+				$arr[$key1] = $value['name'] . " " .  $value['type'] . $length . " " . "NOT NULL" . " "
 				. $extra . " " . $primary . " " .$unique;
 			}
 		}
