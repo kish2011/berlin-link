@@ -61,12 +61,17 @@ class Build_Table extends Table {
 		$this->name = $name;
 
 		// Set the database schema
-		$this->schema = $this->arr_to_schema($schema);
+		$this->schema = $this->array_to_schema($schema);
 
 		parent::__construct();
 	}
 
-	function arr_to_schema($columns) {
+	/**
+	 * Convert columns to schema
+	 *
+	 * @since 1.0.0
+	 */
+	function array_to_schema( $columns ) {
 		$arr = [];
 		foreach ($columns as $key1 => $value) {
 			$arr[$key1] = " ";
